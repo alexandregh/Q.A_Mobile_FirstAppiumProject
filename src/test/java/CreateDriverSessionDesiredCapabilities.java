@@ -17,7 +17,7 @@ public class CreateDriverSessionDesiredCapabilities {
                 File.separator + "ApiDemos-debug.apk";
         DesiredCapabilities capabilitiesAndroid = new DesiredCapabilities();
 
-        capabilitiesAndroid.setCapability("appium:platformName","Android");
+        capabilitiesAndroid.setCapability("platformName","Android");
         capabilitiesAndroid.setCapability("appium:deviceName", "pixel_5");
         capabilitiesAndroid.setCapability("appium:automationName", "UiAutomator2");
         capabilitiesAndroid.setCapability("appium:udid", "emulator-5554");
@@ -30,6 +30,7 @@ public class CreateDriverSessionDesiredCapabilities {
         URL urlAndroid = new URL("http://0.0.0.0:4723");
 
         AppiumDriver driverAndroid = new AndroidDriver(urlAndroid,capabilitiesAndroid);
+        System.out.println("session id: " + driverAndroid.getSessionId());
 
         // iOS...
         /*final String APP_IOS_URL = System.getProperty("user.dir") +

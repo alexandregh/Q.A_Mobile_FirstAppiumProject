@@ -19,3 +19,6 @@ The newest approach called **Options**, from version 2 of Appium, came to be an 
 Although there are snippets of IOS code in both the CreateDriverSessionDesiredCapabilities and CreateDriverSessionSessionUsingOption classes, these are not functional at the moment because IOS app codes only 
 work on the MAC Operating System and it is not possible to continue creating/configuring them and testing them.<br>
 These are commented.
+
+##### Link Capabilities:
+https://appium.io/docs/en/2.1/guides/caps/
