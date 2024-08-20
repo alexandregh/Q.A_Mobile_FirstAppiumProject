@@ -3,8 +3,8 @@
 
 #### Description: 
 This project demonstrates in a simple way, through an example application of the Java main type, how to create/configure a Session Driver of two types as follows:
-- **DesiredCapabilities**;
-- **Options**.
+- **DesiredCapabilities** (class CreateDriverSessionDesiredCapabilities);
+- **Options** (class CreateDriverSessionSessionUsingOption).
 
 #### Features:
 Both approaches to creating/configuring a Session Driver work in a similar way and both the **DesiredCapabilities** approach and the **Options** approach can be used without any problems.<br>
