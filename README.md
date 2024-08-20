@@ -14,3 +14,8 @@ several configurations at once, that is, the same configurations that were assig
 
 #### Note:
 The newest approach called **Options**, from version 2 of Appium, came to be an alternative to the old **DesiredCapabilities** approach.
+
+#### Observation:
+Although there are snippets of IOS code in both the CreateDriverSessionDesiredCapabilities and CreateDriverSessionSessionUsingOption classes, these are not functional at the moment because IOS app codes only 
+work on the MAC Operating System and it is not possible to continue creating/configuring them and testing them.<br>
+These are commented.
