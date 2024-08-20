@@ -20,5 +20,5 @@ Although there are snippets of IOS code in both the CreateDriverSessionDesiredCa
 work on the MAC Operating System and it is not possible to continue creating/configuring them and testing them.<br>
 These are commented.
 
-##### Link Capabilities:
+#### Link Capabilities:
 https://appium.io/docs/en/2.1/guides/caps/
