@@ -1,5 +1,6 @@
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
@@ -8,24 +9,27 @@ import java.net.URL;
 
 public class CreateDriverSessionDesiredCapabilities {
     public static void main(String[] args) throws MalformedURLException {
-        // Android...
         final String APP_ANDROID_URL = System.getProperty("user.dir") +
                 File.separator + "src" +
                 File.separator + "test" +
                 File.separator + "resources" +
                 File.separator + "appAndroid" +
                 File.separator + "ApiDemos-debug.apk";
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+        DesiredCapabilities capabilitiesAndroid = new DesiredCapabilities();
 
-        capabilities.setCapability("platformName","Android");
-        capabilities.setCapability("appium:deviceName", "pixel_5");
-        capabilities.setCapability("appium:automationName", "UiAutomator2");
-        capabilities.setCapability("appium:udid", "emulator-5554");
-        capabilities.setCapability("appium:app", APP_ANDROID_URL);
+        capabilitiesAndroid.setCapability("appium:platformName","Android");
+        capabilitiesAndroid.setCapability("appium:deviceName", "pixel_5");
+        capabilitiesAndroid.setCapability("appium:automationName", "UiAutomator2");
+        capabilitiesAndroid.setCapability("appium:udid", "emulator-5554");
+        capabilitiesAndroid.setCapability("appium:avd", "Pixel_5");
+        capabilitiesAndroid.setCapability("appium:avdLaunchTimeout", 180000);
+        capabilitiesAndroid.setCapability("appium:appPackage", "io.appium.android.apis");
+        capabilitiesAndroid.setCapability("appium:appActivity", "io.appium.android.apis.accessibility.CustomViewAccessibilityActivity");
+        capabilitiesAndroid.setCapability("appium:app", APP_ANDROID_URL);
 
-        URL url = new URL("http://0.0.0.0:4723");
+        URL urlAndroid = new URL("http://0.0.0.0:4723");
 
-        AppiumDriver driver = new AndroidDriver(url,capabilities);
+        AppiumDriver driverAndroid = new AndroidDriver(urlAndroid,capabilitiesAndroid);
 
         // iOS...
         /*final String APP_IOS_URL = System.getProperty("user.dir") +
@@ -34,16 +38,16 @@ public class CreateDriverSessionDesiredCapabilities {
                 File.separator + "resources" +
                 File.separator + "appIOS" +
                 File.separator + "UIKitCatalog-iphonesimulator.app";
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+        DesiredCapabilities capabilitiesIOS = new DesiredCapabilities();
 
-        capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("deviceName", "iPhone 11");
-        capabilities.setCapability("automationName", "XCUITest");
-        capabilities.setCapability("udid", "FDDAF4BC-2C59-4E30-BC16-B05C16E3D29D");
-        capabilities.setCapability("app", APP_IOS_URL);
+        capabilitiesIOS.setCapability("platformName", "iOS");
+        capabilitiesIOS.setCapability("deviceName", "iPhone 11");
+        capabilitiesIOS.setCapability("automationName", "XCUITest");
+        capabilitiesIOS.setCapability("udid", "FDDAF4BC-2C59-4E30-BC16-B05C16E3D29D");
+        capabilitiesIOS.setCapability("app", APP_IOS_URL);
 
-        URL url = new URL("http://0.0.0.0:4723");
+        URL urlIOS = new URL("http://0.0.0.0:4723");
 
-        AppiumDriver driver = new IOSDriver(url,capabilities);*/
+        AppiumDriver driverIOS = new IOSDriver(urlIOS,capabilitiesIOS);*/
     }
 }
