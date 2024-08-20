@@ -23,6 +23,7 @@ public class CreateDriverSessionSessionUsingOption {
                 .setAutomationName("UiAutomator2")
                 .setUdid("emulator-5554")
                 .setAvd("Pixel_5")
+                .setNewCommandTimeout(Duration.ofSeconds(300))
                 .setAvdLaunchTimeout(Duration.ofMillis(180000))
                 .setAppPackage("io.appium.android.apis")
                 .setAppActivity("io.appium.android.apis.accessibility.CustomViewAccessibilityActivity")
@@ -31,6 +32,7 @@ public class CreateDriverSessionSessionUsingOption {
         URL urlAndroid = new URL("http://0.0.0.0:4723");
 
         AppiumDriver driverAndroid = new AndroidDriver(urlAndroid,optionsAndroid);
+        System.out.println("session id: " + driverAndroid.getSessionId());
 
         // iOS...
         /*final String APP_IOS_URL = System.getProperty("user.dir") +

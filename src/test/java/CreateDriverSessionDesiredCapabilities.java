@@ -23,6 +23,7 @@ public class CreateDriverSessionDesiredCapabilities {
         capabilitiesAndroid.setCapability("appium:udid", "emulator-5554");
         capabilitiesAndroid.setCapability("appium:avd", "Pixel_5");
         capabilitiesAndroid.setCapability("appium:avdLaunchTimeout", 180000);
+        capabilitiesAndroid.setCapability("appium:newCommandTimeout", 300);
         capabilitiesAndroid.setCapability("appium:appPackage", "io.appium.android.apis");
         capabilitiesAndroid.setCapability("appium:appActivity", "io.appium.android.apis.accessibility.CustomViewAccessibilityActivity");
         capabilitiesAndroid.setCapability("appium:app", APP_ANDROID_URL);
