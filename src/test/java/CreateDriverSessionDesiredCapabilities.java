@@ -6,6 +6,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 public class CreateDriverSessionDesiredCapabilities {
     public static void main(String[] args) throws MalformedURLException {
@@ -22,8 +23,8 @@ public class CreateDriverSessionDesiredCapabilities {
         capabilitiesAndroid.setCapability("appium:automationName", "UiAutomator2");
         capabilitiesAndroid.setCapability("appium:udid", "emulator-5554");
         capabilitiesAndroid.setCapability("appium:avd", "Pixel_5");
-        capabilitiesAndroid.setCapability("appium:avdLaunchTimeout", 180000);
-        capabilitiesAndroid.setCapability("appium:newCommandTimeout", 300);
+        capabilitiesAndroid.setCapability("appium:avdLaunchTimeout", Duration.ofMillis(180000));
+        capabilitiesAndroid.setCapability("appium:newCommandTimeout", Duration.ofSeconds(300));
         capabilitiesAndroid.setCapability("appium:appPackage", "io.appium.android.apis");
         capabilitiesAndroid.setCapability("appium:appActivity", "io.appium.android.apis.accessibility.CustomViewAccessibilityActivity");
         capabilitiesAndroid.setCapability("appium:app", APP_ANDROID_URL);
