@@ -36,6 +36,18 @@ These are commented.
 
 <hr>
 
+#### Dependencies:
+    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+    <dependency>
+        <groupId>io.appium</groupId>
+        <artifactId>java-client</artifactId>
+        <version>9.3.0</version>
+    </dependency>
+    Description: Java client for Appium Mobile Webdriver
+    Link: https://mvnrepository.com/artifact/io.appium/java-client
+
+<hr>
+
 #### Links Capabilities:
 - https://appium.io/docs/en/2.1/guides/caps/ <br>
 - https://appium.github.io/appium.io/docs/en/writing-running-appium/caps/
