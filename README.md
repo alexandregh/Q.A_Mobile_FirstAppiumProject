@@ -1,4 +1,4 @@
-# FirstAppiumProjectMaven
+# FirstAppiumProject
 ### Appium Session Driver Creation Project for Android and IOS.
 
 <hr>
