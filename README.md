@@ -52,7 +52,7 @@ These are commented.
 This project made in Appium as well as its app **API Demos-debug.apk** was based on the following course:
 - https://www.udemy.com/course/the-complete-appium-course-for-ios-and-android/
 
-<br>
+<hr>
 
 #### Links Capabilities:
 - https://appium.io/docs/en/2.1/guides/caps/ <br>
